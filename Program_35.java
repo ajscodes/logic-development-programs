@@ -1,2 +1,0 @@
-//leetcode
-//self pending
