@@ -22,14 +22,20 @@ void main(){
 
     if(count%2 == 0){
         left = sq / (int)pow(10,(count/2));
-        right = sq % (int)(10, (count/2));
+        right = sq % (int)round(pow(10,(count/2))); //round can give 100. without round it give 99 in case of count = 4 because 99.99999999999997
     }
     else{
         left = sq / (int)pow(10,(count/2)+1);
-        right = sq % (int)pow(10, (count/2)+1);
+        right = sq % (int)round(pow(10,(count/2) + 1));
     }
 
+    // printf("%d", left);
+    // printf("\n%d", right);
 
-    printf("%d", left);
-    printf("\n%d", right);
+    if(left + right == n){
+        printf("Kaprekar");
+    }
+    else{
+        printf("NOT Kaprekar");
+    }
 }
